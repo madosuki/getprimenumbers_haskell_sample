@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6e2282548d247c17b1adac990014f39b41bfb67861bbac054f63572b96063cf1
+
+name:           getPrimeNumber
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/getPrimeNumber#readme>
+homepage:       https://github.com/githubuser/getPrimeNumber#readme
+bug-reports:    https://github.com/githubuser/getPrimeNumber/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/getPrimeNumber
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_getPrimeNumber
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable getPrimeNumber-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_getPrimeNumber
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , getPrimeNumber
+  default-language: Haskell2010
+
+test-suite getPrimeNumber-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_getPrimeNumber
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , getPrimeNumber
+  default-language: Haskell2010
